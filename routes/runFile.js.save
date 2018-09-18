@@ -1,0 +1,15 @@
+const router = require('express').Router();
+const save = require('save-file');
+
+router.post('/', (req,res)=>{
+
+console.log("test post");
+console.log(req.body.file);
+save(req.body.file, 'test.py', (err,data =>{
+if err throw(err);
+})
+)
+
+
+});
+module.exports = router;
